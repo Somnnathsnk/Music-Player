@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("./photo.jpeg");
+  background-size: cover;
+  background-position: center;
+  animation: bgMove 20s ease infinite;
+}
+.player {
+  width: 360px;
+  background: #f9c5c5;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* Cover Image */
+.cover img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(58, 209, 232, 0.5);
+}
+
+/* Song Info */
+h2 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+
+p {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0 0 15px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.controls button {
+  background: #1db954;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  background: #1ed760;
+}
+
+/* Progress Bar */
+.progress-container {
+  background: #404040;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px 0;
+  height: 6px;
+  width: 100%;
+  position: relative;
+}
+
+.progress {
+  background: #1db954;
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.2s linear;
+}
+
+/* Time */
+.time {
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Volume */
+.volume-control {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Playlist */
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+#playlist li {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#playlist li:hover {
+  background: #282828;
+}
+
+#playlist li.active {
+  background: #1db954;
+  color: #fff;
+}
